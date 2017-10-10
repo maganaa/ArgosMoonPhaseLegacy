@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import urllib.request, json
 
 #Find User Location
@@ -13,4 +15,6 @@ openMoonURL = urllib.request.urlopen(moonURL).read()
 formatMoonURL = json.loads(openMoonURL)
 fracillum = formatMoonURL['fracillum']
 curphase = formatMoonURL['curphase']
+print("MoonPhase")
+print("---")
 print(curphase)
