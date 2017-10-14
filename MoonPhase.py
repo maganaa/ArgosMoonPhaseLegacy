@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-import urllib.request, json
+import urllib.request
+import json
+import emoji
 
 #Find User Location
 locationURL = 'http://freegeoip.net/json'
@@ -15,6 +17,6 @@ openMoonURL = urllib.request.urlopen(moonURL).read()
 formatMoonURL = json.loads(openMoonURL)
 fracillum = formatMoonURL['fracillum']
 curphase = formatMoonURL['curphase']
-print("MoonPhase")
+print(emoji.emojize("MoonPhase :waxing_gibbous_moon:"))
 print("---")
 print(curphase)
