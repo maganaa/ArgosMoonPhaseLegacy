@@ -15,8 +15,18 @@ lon = formatLocationURL['longitude']
 moonURL = "http://api.usno.navy.mil/rstt/oneday?date=today&coords=" + str(lat) + "," + str(lon)
 openMoonURL = urllib.request.urlopen(moonURL).read()
 formatMoonURL = json.loads(openMoonURL)
-fracillum = formatMoonURL['fracillum']
-curphase = formatMoonURL['curphase']
+try:
+    fracillum = formatMoonURL['fracillum']
+    curphase = formatMoonURL['curphase']
+except KeyError:
+    curphase = formatMoonURL['closestphase']['phase']
+    if curphase == "Full Moon":
+        fracillum = "100%"
+    elif curphase == "New Moon":
+        fracillum = "0%"
+    elif curphase == "First Quarter" or curphase == "Last Quarter":
+        fracillum = "50%"
+
 
 if curphase == "New Moon":
     print(emoji.emojize(":new_moon:"))
@@ -28,12 +38,12 @@ elif curphase == "First Quarter":
     print(emoji.emojize(":first_quarter_moon:"))
 
 elif curphase == "Waxing Gibbous":
-    print(emoji.emojize(":waxing_crescent_moon:"))
+    print(emoji.emojize(":waxing_gibbous_moon:"))
 
 elif curphase == "Full Moon":
     print(emoji.emojize(":full_moon:"))
 
-elif curphase == "Waning Gibbous": 
+elif curphase == "Waning Gibbous":
     print(emoji.emojize(":waning_gibbous_moon:"))
 
 elif curphase == "Last Quarter":
