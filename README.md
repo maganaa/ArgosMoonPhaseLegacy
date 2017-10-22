@@ -2,7 +2,7 @@
 
 <h3 align="center">Display the current moon phase in the menu bar</h3>
 
-<div align="center"><img src ="https://user-images.githubusercontent.com/25762130/31589068-faee30c8-b1c8-11e7-80a0-d014f3982a27.png" /></div>
+<div align="center"><img src ="https://user-images.githubusercontent.com/25762130/31857400-d6b9b5b4-b6ab-11e7-90a1-a66bcf07ac57.png" /></div>
 
 This Python 3 script is designed to work with <a href="https://github.com/p-e-w/argos">Argos</a>, a wonderful GNOME 3 shell extention that allows for the easy creation of new extentions.  This program finds the users location with <a href= "https://freegeoip.net/">freegeoip.net</a> and uses that to find the current moon phase with <a href="http://aa.usno.navy.mil/data/docs/api.php">Astronomical Applications API</a>.  The resulting moon phase is displayed as an emoji in the user's GNOME menu bar.  Clicking on the emoji creates a dropdown that displays the name of the current phase, as well as the percent of the moon illuminated.  
 </html>
