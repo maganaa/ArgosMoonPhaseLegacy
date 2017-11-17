@@ -1,6 +1,6 @@
-<h1 align="center">ArgosMoonPhase</h1>
+<h1 align="center">ArgosMoonPhaseLegacy</h1>
 
-<h3 align="center">Display the current moon phase in the menu bar</h3>
+<h3 align="center">Display the current moon phase in the menu bar (GNOME 3.24 and below) </h3>
 
 <div align="center"><img src ="https://user-images.githubusercontent.com/25762130/31857400-d6b9b5b4-b6ab-11e7-90a1-a66bcf07ac57.png" /></div>
 
